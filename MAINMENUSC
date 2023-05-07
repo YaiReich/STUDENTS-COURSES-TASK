@@ -1,0 +1,19 @@
+ Columns . . . :    6  76            Edit                    JBLTD101/QRPGLESRC 
+ SEU==>                                                              MAINMENUSC 
+ FMT FX FFilename++IPEASF.....L.....A.Device+.Keywords+++++++++++++++++++++++++ 
+        *************** Beginning of data ************************************* 
+0001.00 FDSMMENU   CF   E             WORKSTN                                   
+0002.00 C*                                                                      
+0003.00 C     *IN03         DOWEQ     *OFF                                      
+0004.00 C                   EXFMT     MAIN                                      
+0005.00 C     OP            IFEQ      1                                         
+0006.00 C                   CALL      'STUDENTS'                                
+0007.00 C                   ENDIF                                               
+0008.00 C*    OP            IFEQ      2                                         
+0009.00 C*                  CALL      'COURSES'                                 
+0010.00 C*                  ENDIF                                               
+0011.00 C                   MOVE      *BLANKS       OP                          
+0012.00 C                   ENDDO                                               
+0013.00 C*                                                                      
+0014.00 C                   SETON                                        LR     
+        ****************** End of data **************************************** 
