@@ -1,0 +1,20 @@
+ Columns . . . :    6  76            Edit                    JBLTD101/QRPGLESRC 
+ SEU==>                                                              STUDENTSFL 
+ FMT FX FFilename++IPEASF.....L.....A.Device+.Keywords+++++++++++++++++++++++++ 
+        *************** Beginning of data ************************************* 
+0001.00 FPSTUDENT  UF A E           K DISK                                      
+0002.00 FCITYPF    IF   E           K DISK                                      
+0003.00 FSTREETP   IF   E           K DISK                                      
+0004.00 FADDRESSP  IF   E           K DISK                                      
+0005.00 FSTUDENTSFLCF   E             WORKSTN                                   
+0006.00 F                                     SFILE(SFLR:RRN)                   
+0007.00 F                                     SFILE(CITYSFL:RRNC)               
+0008.00 F                                     SFILE(STREETSFL:RRNS)             
+0009.00 F                                     SFILE(ADDRESSSFL:RRNA)            
+0010.00 C*                                                                      
+0011.00 C                   SETON                                        51     
+0012.00 C     *IN03         DOWEQ     *OFF                                      
+0013.00 C                   SETON                                        50     
+0014.00 C                   SETOFF                                       44     
+0015.00 C                   WRITE     TOP                                       
+0016.00 C                   WRITE     BOT                                       
