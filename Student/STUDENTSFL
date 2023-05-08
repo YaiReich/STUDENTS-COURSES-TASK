@@ -63,3 +63,7 @@
 0059.00 C     OP            IFEQ      '8'                                       
 0060.00 C                   EXSR      DISPLAY1                                  
 0061.00 C                   ENDIF                                               
+0062.00 C                   READC     SFLR                                 9999 
+0063.00 C                   ENDDO                                               
+0064.00 C                   ENDSR                                               
+0065.00 C*                                                                      
