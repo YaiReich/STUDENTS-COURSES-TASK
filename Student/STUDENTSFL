@@ -18,3 +18,48 @@
 0014.00 C                   SETOFF                                       44     
 0015.00 C                   WRITE     TOP                                       
 0016.00 C                   WRITE     BOT                                       
+0017.00 C                   EXSR      FILLSFL                                 
+0018.00 C                   EXFMT     SFLCTL                                  
+0019.00 C                   SETOFF                                       3133 
+0020.00 C     *IN06         IFEQ      *ON                                     
+0021.00 C                   EXSR      NEW                                     
+0022.00 C                   ELSE                                              
+0023.00 C                   EXSR      TIPUL                                   
+0024.00 C                   ENDIF                                             
+0025.00 C                   ENDDO                                             
+0026.00 C                   SETON                                        LR 
+0027.00 C*                                                                      
+0028.00 C     FILLSFL       BEGSR                                               
+0029.00 C                   SETON                                        3234   
+0030.00 C                   WRITE     SFLCTL                                    
+0031.00 C                   SETOFF                                       34     
+0032.00 C                   Z-ADD     0             RRN               4 0       
+0033.00 C     *LOVAL        SETLL     RSTUDENT                           9999   
+0034.00 C                   READ      RSTUDENT                             9999 
+0035.00 C     *IN99         DOWEQ     *OFF                                      
+0036.00 C                   MOVE      *BLANKS       OP                          
+0037.00 C                   ADD       1             RRN                         
+0038.00 C                   WRITE     SFLR                                      
+0039.00 C                   READ      RSTUDENT                             9999 
+0040.00 C                   ENDDO                                               
+0041.00 C     RRN           IFGT      0                                         
+0042.00 C                   SETON                                        3133   
+0043.00 C                   Z-ADD     1             POS         
+0044.00 C                   ENDIF                                               
+0045.00 C                   ENDSR                                     
+0046.00 C*                                                                      
+0047.00 C     TIPUL         BEGSR                                               
+0048.00 C                   READC     SFLR                                 9999 
+0049.00 C     *IN99         DOWEQ     *OFF                                      
+0050.00 C     OP            IFEQ      '2'                                       
+0051.00 C                   EXSR      UPDATE1                                   
+0052.00 C                   ENDIF                                               
+0053.00 C     OP            IFEQ      '4'                                       
+0054.00 C                   EXSR      DELETE1                                   
+0055.00 C                   ENDIF                                               
+0056.00 C     OP            IFEQ      '5'                                       
+0057.00 C                   EXSR      SEND1                                     
+0058.00 C                   ENDIF                                               
+0059.00 C     OP            IFEQ      '8'                                       
+0060.00 C                   EXSR      DISPLAY1                                  
+0061.00 C                   ENDIF                                               
