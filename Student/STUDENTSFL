@@ -67,3 +67,26 @@
 0063.00 C                   ENDDO                                               
 0064.00 C                   ENDSR                                               
 0065.00 C*                                                                      
+0066.00 C     NEW           BEGSR                                               
+0067.00 C                   SETON                                        56     
+0068.00 C                   SETOFF                                       50     
+0069.00 C                   EXSR      REK                                       
+0070.00 C                   WRITE     TOP                                       
+0071.00 C                   WRITE     BOT                                       
+0072.00 C     *IN03         DOWEQ     *OFF                                      
+0073.00 C     *IN12         ANDEQ     *OFF                                      
+0074.00 C     *IN02         ANDEQ     *OFF                                      
+0075.00 C                   EXFMT     ALLF                                      
+0076.00 C   09              EXSR      CITIES                                    
+0077.00 C   10              EXSR      STREETS                                   
+0078.00 C   11              EXSR      ADDRESS                                   
+0079.00 C   02              DO                                                  
+0080.00 C     SID           SETLL     RSTUDENT                               46 
+0081.00 C  N46              WRITE     RSTUDENT                                  
+0082.00 C   46              SETOFF                                       02     
+0083.00 C                   ENDDO                                               
+0084.00 C                   SETOFF                                           46 
+0085.00 C                   ENDDO                                               
+0086.00 C                   SETOFF                                           56 
+0087.00 C                   ENDSR                                               
+0088.00 C*                                                                                                                       
