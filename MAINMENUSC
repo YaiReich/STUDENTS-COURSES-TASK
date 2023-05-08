@@ -7,13 +7,16 @@
 0003.00 C     *IN03         DOWEQ     *OFF                                      
 0004.00 C                   EXFMT     MAIN                                      
 0005.00 C     OP            IFEQ      1                                         
-0006.00 C                   CALL      'STUDENTS'                                
+0006.00 C                   CALL      'STUDENTSFL'                              
 0007.00 C                   ENDIF                                               
-0008.00 C*    OP            IFEQ      2                                         
-0009.00 C*                  CALL      'COURSES'                                 
-0010.00 C*                  ENDIF                                               
+0008.00 C     OP            IFEQ      2                                         
+0009.00 C                   CALL      'COURSESFL'                               
+0010.00 C                   ENDIF                                               
+0010.01 C     OP            IFEQ      0                                         
+0010.02 C                   SETON                                        50     
+0010.03 C                   ENDIF                                               
 0011.00 C                   MOVE      *BLANKS       OP                          
 0012.00 C                   ENDDO                                               
-0013.00 C*                                                                      
-0014.00 C                   SETON                                        LR     
-        ****************** End of data **************************************** 
+0013.00 C*  
+0014.00 C                   SETON                                        LR    
+        ****************** End of data ****************************************
