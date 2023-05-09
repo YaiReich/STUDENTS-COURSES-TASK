@@ -81,12 +81,3 @@
 0077.00 C   10              EXSR      STREETS                                   
 0078.00 C   11              EXSR      ADDRESS                                   
 0079.00 C   02              DO                                                  
-0080.00 C     SID           SETLL     RSTUDENT                               46 
-0081.00 C  N46              WRITE     RSTUDENT                                  
-0082.00 C   46              SETOFF                                       02     
-0083.00 C                   ENDDO                                               
-0084.00 C                   SETOFF                                           46 
-0085.00 C                   ENDDO                                               
-0086.00 C                   SETOFF                                           56 
-0087.00 C                   ENDSR                                               
-0088.00 C*                                                                                                                       
